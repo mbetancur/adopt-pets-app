@@ -1,6 +1,14 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Getting Started for contribuitors
 
-## Getting Started
+SETUP For vs code:
+
+Install Prettier extension
+Turn on Format on Save feature
+Turn on Prettier require config
+ 
+Or 
+Cmd shit P
+Format -> configure -> choose Prettier
 
 First, run the development server:
 
