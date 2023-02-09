@@ -2,11 +2,12 @@
 
 SETUP For vs code:
 
-Install Prettier extension
-Turn on Format on Save feature
-Turn on Prettier require config
- 
-Or 
+- Install Prettier extension
+- Install ESLint extension
+- Turn on Format on Save feature
+- Turn on Prettier require config
+
+Or
 Cmd shit P
 Format -> configure -> choose Prettier
 
