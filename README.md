@@ -1,4 +1,4 @@
-## Getting Started for contribuitors
+## Getting Started for contributors
 
 SETUP For vs code:
 
