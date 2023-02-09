@@ -1,3 +1,5 @@
+// This layout is to group pages and components under
+
 export default function ContactLayout({
   children,
 }: {
