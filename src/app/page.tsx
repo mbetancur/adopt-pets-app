@@ -1,8 +1,6 @@
 import styles from "./page.module.css";
 import Pet from "@/components/Pet";
 import { fetchPets } from "./fetchPet";
-import { Animal } from "./APIResponsesTypes";
-const ANIMALS: Animal[] = ["bird", "cat", "dog", "rabbit", "reptile"];
 
 // const inter = Inter({ subsets: ["latin"] }); // TODO: Investigate about this
 
@@ -17,7 +15,7 @@ export default async function Home() {
 
   return (
     <main className={styles.main}>
-      <div>This is the landing page</div>
+      <h1>Welcome to adopt a Pet</h1>
       <Pet
         animal={pet.animal}
         key={pet.id}
