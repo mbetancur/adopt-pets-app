@@ -1,21 +1,27 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import { IReqPetParams } from "./PetsSection";
 
-export default function PetsFilter(props) {
-  const [petRequestParams, setPetRequestParams] = useState({
+interface IPetsFilter {
+  sendData: (data: IReqPetParams) => void;
+}
+
+export default function PetsFilter({ sendData }: IPetsFilter) {
+  const [petReqParams, setPetReqParams] = useState({
     animal: "",
     location: "",
     breed: "",
   });
 
-  const findPet = (e) => {
+  const findPet = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    props.sendData(petRequestParams);
+    sendData(petReqParams);
   };
 
-  const handleInputPet = (e) => {
-    setPetRequestParams({
-      ...petRequestParams,
-      [e.target.name]: e.target.value,
+  const handleInputPet = (e: React.FormEvent<HTMLInputElement>) => {
+    const target = e.target as HTMLInputElement; // Why is this casted needed?
+    setPetReqParams({
+      ...petReqParams,
+      [target.name]: target.value,
     });
   };
 

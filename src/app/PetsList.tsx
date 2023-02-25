@@ -1,10 +1,11 @@
 import Pet from "@/components/Pet";
+import { IPet } from "./APIResponsesTypes";
 
-export default function PetsList(props) {
+export default function PetsList({ pets }: { pets: IPet[] }) {
   return (
     <>
       <h2>List of Pets:</h2>
-      {props.pets.map((pet) => (
+      {pets.map((pet) => (
         <Pet
           animal={pet.animal}
           key={pet.id}

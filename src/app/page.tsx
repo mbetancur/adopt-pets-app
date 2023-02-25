@@ -1,16 +1,18 @@
 import styles from "./page.module.css";
 import Pet from "@/components/Pet";
 import { fetchPets } from "./fetchPet";
+import { PetAPIResponse } from "./APIResponsesTypes";
 
 // const inter = Inter({ subsets: ["latin"] }); // TODO: Investigate about this
 
-const getPets = async () => {
-  return await fetchPets();
+const getPets = () => {
+  return fetchPets();
 };
 
 export default async function Home() {
   // TODO: make this request only to get 1 pet
-  const data = await getPets();
+  // why do I need the as. Alternative to this ?
+  const data = (await getPets()) as PetAPIResponse;
   const pet = data.pets[0];
 
   return (
