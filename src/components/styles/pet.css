@@ -5,6 +5,9 @@
   height: auto;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
   text-align: center;
   border: 1px solid black;
   border-radius: 10px;
@@ -14,6 +17,11 @@
     width: 100%;
     max-width: 300px;
     max-height: 300px;
+    border: 1px solid black;
     border-radius: 10px;
     object-fit: contain;
+    overflow: hidden;
+}
+.container_pet__info{
+  min-width: 500px;
 }
