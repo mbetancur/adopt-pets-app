@@ -1,5 +1,19 @@
-.pet {
+.petContainer{
+  padding: 12px;
+  margin-bottom: 8px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.pet img{
     width: 100%;
-    display: block;
-    overflow: hidden;
-  }
+    max-width: 300px;
+    max-height: 300px;
+    border-radius: 10px;
+    object-fit: contain;
+}

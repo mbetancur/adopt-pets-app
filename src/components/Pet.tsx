@@ -18,7 +18,7 @@ const Pet = (props: IProps) => {
   }
 
   return (
-    <>
+    <div className="petContainer">
       <div className="pet">
         <img src={hero} alt={name} />
       </div>
@@ -26,7 +26,7 @@ const Pet = (props: IProps) => {
         <h1>{name}</h1>
         <h2>{`${animal} — ${breed} — ${location}`}</h2>
       </div>
-    </>
+    </div>
   );
 };
 

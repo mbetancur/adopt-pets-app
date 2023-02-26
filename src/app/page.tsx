@@ -2,6 +2,7 @@ import styles from "./page.module.css";
 import Pet from "@/components/Pet";
 import { fetchPets } from "./fetchPet";
 import { PetAPIResponse } from "./APIResponsesTypes";
+import './styles/page.css'
 
 // const inter = Inter({ subsets: ["latin"] }); // TODO: Investigate about this
 
