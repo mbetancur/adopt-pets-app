@@ -18,11 +18,11 @@ const Pet = (props: IProps) => {
   }
 
   return (
-    <div className="petContainer">
-      <div className="pet">
+    <div className="container_pet">
+      <div className="container_pet__img">
         <img src={hero} alt={name} />
       </div>
-      <div className="info">
+      <div className="container_pet__info">
         <h1>{name}</h1>
         <h2>{`${animal} — ${breed} — ${location}`}</h2>
       </div>

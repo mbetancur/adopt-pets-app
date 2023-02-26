@@ -1,4 +1,4 @@
-.petContainer{
+.container_pet{
   padding: 12px;
   margin-bottom: 8px;
   width: 100%;
@@ -10,7 +10,7 @@
   border-radius: 10px;
 }
 
-.pet img{
+.container_pet__img img{
     width: 100%;
     max-width: 300px;
     max-height: 300px;
