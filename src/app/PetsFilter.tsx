@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { IReqPetParams } from "./PetsSection";
-import './styles/PetsFilter.css';
+import './styles/petsFilter.css';
 
 interface IPetsFilter {
   sendData: (data: IReqPetParams) => void;
@@ -28,14 +28,14 @@ export default function PetsFilter({ sendData }: IPetsFilter) {
 
   return (
     //TODO: validate for better implementation of react forms
-    <div className="petContainerForm">
+    <div className="container_pet__form">
       <h1>Looking for a pet?</h1>
-      <form onSubmit={findPet} className='petForm'>
-        <label for="animal">Type Animal</label>        
+      <form onSubmit={findPet} className='container_pet__form-inputs'>
+        <label htmlFor="animal">Type Animal</label>        
         <input name="animal" id="animal" onChange={handleInputPet} />
-        <label for="location">Location</label>
+        <label htmlFor="location">Location</label>
         <input name="location" id="location" onChange={handleInputPet} />
-        <label for="breed">breed</label>
+        <label htmlFor="breed">breed</label>
         <input name="breed" id="breed" onChange={handleInputPet} />
         <button>Submit</button>
       </form>
