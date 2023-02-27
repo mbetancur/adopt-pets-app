@@ -21,11 +21,7 @@ export default function PetsSection() {
   const sendData = (data: IReqPetParams) => {
     const { animal, location, breed } = data;
     // OMG how can I make the lintker works with an async/await implementation?
-    // const res = (await fetchFilterPets(
-    //   animal,
-    //   location,
-    //   breed
-    // )) as PetAPIResponse;
+    // const res = await fetchFilterPets(animal, location, breed);
     // setPets(res.pets);
     fetchFilterPets(animal, location, breed)
       .then((res: PetAPIResponse) => setPets(res.pets))
