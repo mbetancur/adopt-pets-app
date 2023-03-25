@@ -23,8 +23,10 @@ const Pet = (props: IProps) => {
         <img src={hero} alt={name} />
       </div>
       <div className="container_pet__info">
-        <h1>{name}</h1>
-        <h2>{`${animal} — ${breed} — ${location}`}</h2>
+        <h2>{name}</h2>
+        <h3>{`${animal}` }</h3>
+        <h3>{`${breed}` }</h3>
+        <h3>{`${location}` }</h3>
       </div>
     </div>
   );

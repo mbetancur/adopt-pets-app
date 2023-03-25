@@ -1,10 +1,12 @@
 import Pet from "@/components/Pet";
 import { IPet } from "./APIResponsesTypes";
+import './styles/petsList.css'
 
 export default function PetsList({ pets }: { pets: IPet[] }) {
   return (
     <>
       <h2>List of Pets:</h2>
+      <div className="container__list">
       {pets.map((pet) => (
         <Pet
           animal={pet.animal}
@@ -16,6 +18,7 @@ export default function PetsList({ pets }: { pets: IPet[] }) {
           id={pet.id}
         />
       ))}
+      </div>
     </>
   );
 }
