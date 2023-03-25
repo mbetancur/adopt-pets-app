@@ -22,6 +22,7 @@ export default function PetsFilter({ sendData }: IPetsFilter) {
     const target = e.target as HTMLInputElement; // Why is this casted needed?
     setPetReqParams({
       ...petReqParams,
+      // [target.name]: target.value,
       [target.name]: target.value,
     });
   };
@@ -32,7 +33,15 @@ export default function PetsFilter({ sendData }: IPetsFilter) {
       <h1>Looking for a pet?</h1>
       <form onSubmit={findPet} className="container_pet__form-inputs">
         <label htmlFor="animal">Type Animal</label>
-        <input name="animal" id="animal" onChange={handleInputPet} />
+        <select name="animal" id="animal" onChange={handleInputPet}>
+          <option> </option>
+          <option value="dog">Dog 🐕 </option>
+          <option value="cat">Cat 🐈 </option>
+          <option value="bird">Bird 🐦 </option>
+          <option value="rabbit">Rabbit 🐇 </option>
+          <option value="reptile">Reptile 🐍 </option>
+        </select>
+        {/* <input name="animal" id="animal" onChange={handleInputPet} /> */}
         <label htmlFor="location">Location</label>
         <input name="location" id="location" onChange={handleInputPet} />
         <label htmlFor="breed">breed</label>

@@ -16,7 +16,7 @@
     border-radius: 10px;
     
 }
-.container_pet__form-inputs input{
+.container_pet__form-inputs input,.container_pet__form-inputs select{
     width: 100%;
     padding: 4px 0 4px 8px;
     border: 1px solid black;
@@ -28,4 +28,10 @@
     border: 1px solid black;
     border-radius: 10px;
     cursor: pointer;
+}
+.container_pet__form-inputs select option{
+    width: 100%;
+    padding: 4px 0 4px 8px;
+    border: 1px solid red;
+    border-radius: 10px;
 }
