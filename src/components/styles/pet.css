@@ -1,4 +1,4 @@
-.container_pet{
+.pet{
   padding: 12px;
   margin-bottom: 8px;
   width: 270px;
@@ -13,7 +13,7 @@
   border-radius: 10px;
 }
 
-.container_pet__img img,.container_pet__info{
+.pet__img img,.pet__info{
     width: 100%;
     width: 250px;
     height: 250px;
@@ -22,7 +22,7 @@
     object-fit: fill;
     overflow: hidden;
 }
-.container_pet__info{
+.pet__info{
   width: 250px;
   height: 253px;
   display: none;
@@ -30,8 +30,10 @@
   color:black;
   background: rgb(255,255,255);
   background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 70%, rgba(1,1,1,0) 100%);
-  /* border:none; */
+  border:none;
 }
-.container_pet:hover>.container_pet__info{
+/*
+.pet:hover>.pet__info{
   display: block;
 }
+*/
