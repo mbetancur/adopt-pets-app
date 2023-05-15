@@ -1,19 +1,19 @@
 import styles from "./page.module.css";
 import Pet from "@/components/Pet";
-import { fetchPets } from "./fetchPet";
+import { fetchPetById } from "./fetchPet";
 import { PetAPIResponse } from "./APIResponsesTypes";
 import "./styles/page.css";
+import PetsSection from "./PetsSection";
 
 // const inter = Inter({ subsets: ["latin"] }); // TODO: Investigate about this
 
-const getPets = (): Promise<PetAPIResponse> => {
-  return fetchPets();
+const getPet = (idFirstPet = 1): Promise<PetAPIResponse> => {
+  return fetchPetById(idFirstPet);
 };
 
 export default async function Home() {
   // TODO: make this request only to get 1 pet
-  // why do I need the as. Alternative to this ?
-  const data = await getPets();
+  const data = await getPet();
   const pet = data.pets[0];
 
   return (
@@ -28,6 +28,7 @@ export default async function Home() {
         location={`${pet.city}, ${pet.state}`}
         id={pet.id}
       />
+      <PetsSection />
     </main>
   );
 }

@@ -20,7 +20,7 @@ export default function PetsSection() {
   // consider making one fetch of all the data at the begining of the flow and only filter pets in state
   const sendData = (data: IReqPetParams) => {
     const { animal, location, breed } = data;
-    // OMG how can I make the lintker works with an async/await implementation?
+    // OMG how can I make the linter works with an async/await implementation?
     // const res = await fetchFilterPets(animal, location, breed);
     // setPets(res.pets);
     fetchFilterPets(animal, location, breed)
