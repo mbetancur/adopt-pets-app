@@ -41,7 +41,7 @@ export default function PetsFilter({ sendData }: IPetsFilter) {
       <form onSubmit={findPet} className="container_pet__form-inputs">
         <label htmlFor="animal">Type Animal</label>
         <select name="animal" id="animal" onChange={handleSelectPet}>
-          <option value="" selected disabled hidden>Choose a pet</option>
+          <option defaultValue="" disabled hidden>Choose a pet</option>
           <option value="dog">Dog 🐕 </option>
           <option value="cat">Cat 🐈 </option>
           <option value="bird">Bird 🐦 </option>

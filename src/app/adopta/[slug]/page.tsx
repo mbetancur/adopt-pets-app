@@ -29,6 +29,9 @@ export default async function adoptaPet({ params }: petParams) {
         images={pet.images}
         location={`${pet.city}, ${pet.state}`}
         id={pet.id}
+        city={pet.city}
+        description={pet.description}
+        state={pet.state}
       />
     </>
   );
