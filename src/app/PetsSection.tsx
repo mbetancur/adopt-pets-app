@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { IPet, PetAPIResponse } from "./APIResponsesTypes";
-import { fetchFilterPets } from "./fetchPet";
+import { IPet, PetAPIResponse } from "./services/APIResponsesTypes";
+import { fetchFilterPets } from "./services/fetchPet";
 import PetsFilter from "./PetsFilter";
 import PetsList from "./PetsList";
 
@@ -18,14 +18,14 @@ export default function PetsSection() {
 
   //TODO : does the scope change within fn outside of the component declaration?
   // consider making one fetch of all the data at the begining of the flow and only filter pets in state
-  const sendData = (data: IReqPetParams) => {
+  const sendData = async (data: IReqPetParams) => {
     const { animal, location, breed } = data;
     // OMG how can I make the linter works with an async/await implementation?
-    // const res = await fetchFilterPets(animal, location, breed);
-    // setPets(res.pets);
-    fetchFilterPets(animal, location, breed)
-      .then((res: PetAPIResponse) => setPets(res.pets))
-      .catch((e) => console.log(e));
+    const res = await fetchFilterPets(animal, location, breed);
+    setPets(res.pets);
+    // fetchFilterPets(animal, location, breed)
+    //   .then((res: PetAPIResponse) => setPets(res.pets))
+    //   .catch((e) => console.log(e));
   };
 
   return (

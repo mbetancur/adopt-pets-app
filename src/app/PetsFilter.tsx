@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { IReqPetParams } from "./PetsSection";
-import "./styles/petsFilter.css";
+import React, { useState } from 'react';
+import { IReqPetParams } from './PetsSection';
+import './styles/petsFilter.css';
 
 interface IPetsFilter {
   sendData: (data: IReqPetParams) => void;
@@ -8,9 +8,9 @@ interface IPetsFilter {
 
 export default function PetsFilter({ sendData }: IPetsFilter) {
   const [petReqParams, setPetReqParams] = useState({
-    animal: "",
-    location: "",
-    breed: "",
+    animal: '',
+    location: '',
+    breed: '',
   });
 
   const findPet = (e: React.FormEvent<HTMLFormElement>) => {
@@ -41,7 +41,9 @@ export default function PetsFilter({ sendData }: IPetsFilter) {
       <form onSubmit={findPet} className="container_pet__form-inputs">
         <label htmlFor="animal">Type Animal</label>
         <select name="animal" id="animal" onChange={handleSelectPet}>
-          <option defaultValue="" disabled hidden>Choose a pet</option>
+          <option defaultValue="" disabled hidden>
+            Choose a pet
+          </option>
           <option value="dog">Dog 🐕 </option>
           <option value="cat">Cat 🐈 </option>
           <option value="bird">Bird 🐦 </option>

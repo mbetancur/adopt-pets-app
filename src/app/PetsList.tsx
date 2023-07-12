@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Modal from "@/components/Modal";
 import Pet from "@/components/Pet";
 import Link from "next/link";
-import { IPet } from "./APIResponsesTypes";
+import { IPet } from "./services/APIResponsesTypes";
 import "./styles/petsList.css";
 
 const PetsList = ({ pets }: { pets: IPet[] }) => {

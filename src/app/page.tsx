@@ -1,7 +1,7 @@
 import styles from "./page.module.css";
 import Pet from "@/components/Pet";
-import { fetchPetById } from "./fetchPet";
-import { PetAPIResponse } from "./APIResponsesTypes";
+import { fetchPetById } from "./services/fetchPet";
+import { PetAPIResponse } from "./services/APIResponsesTypes";
 import "./styles/page.css";
 import PetsSection from "./PetsSection";
 
@@ -27,6 +27,9 @@ export default async function Home() {
         images={pet.images}
         location={`${pet.city}, ${pet.state}`}
         id={pet.id}
+        city={pet.city}
+        description={pet.description}
+        state={pet.state}
       />
       <PetsSection />
     </main>
