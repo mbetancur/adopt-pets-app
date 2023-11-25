@@ -2,8 +2,11 @@ import Link from "next/link";
 import Header from "@/components/Header";
 
 const getData = async () => {
-  const data = await fetch("https://www.reddit.com/.json"); // this will be cached by default
-  return data.json();
+  // const data = await fetch("https://www.reddit.com/.json"); // this will be cached by default
+  const res = await fetch('http://localhost:1337/api/posts');
+
+  console.log(res)
+  return res.json();
 };
 
 // Example fetch and display of the result
